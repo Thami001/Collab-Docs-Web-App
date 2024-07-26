@@ -32,7 +32,7 @@ const Document =async({params: {id}} : SearchParamProps) => {
         userType: room.usersAccesses[user.email]?.includes('room:write') ? 'editor' : 'viewer'
     }))
 
-    const currentUserType = room.usersAccesses[clerkUser.emailAddresses[0].emailAddress]?.includes('users:write') ? 'editor' : 'viewer';
+    const currentUserType = room.usersAccesses[clerkUser.emailAddresses[0].emailAddress]?.includes('room:write') ? 'editor' : 'viewer';
 
     return (
         <main className={"flex w-full flex-col items-center"}>
